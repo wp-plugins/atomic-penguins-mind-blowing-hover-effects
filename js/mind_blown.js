@@ -39,8 +39,8 @@ function HovEffect(){
       },function(){
          if(e(this).find(".square_hover").attr("in") == 'slide' || e(this).find(".square_hover").attr("entrance") == 1)
       {
-          var total_height = e(".square_preview").height();
-          var title_height = 95;
+          var total_height = e(".square_preview").height() - 50;
+        var title_height = e("#thehover_title").outerHeight(true);
           var total = total_height - title_height;
           e(this).find(".square_hover").animate({top: total}, {queue: false, duration: 400});
       }

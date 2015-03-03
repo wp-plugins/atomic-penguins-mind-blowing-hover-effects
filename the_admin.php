@@ -110,6 +110,7 @@
 			TITLE: <input type="text" style="width: 70%;margin-bottom: 5px" id="hover_title" placeholder="Hover Title Here"><br />
 			LINK : <input type="text" style="width: 70%;margin-bottom: 5px" id="hover_title_link" placeholder="Hover Title Link Here"><br />
 			Color: <input type="color" class="color" id="title_color">
+			Font Size: <input type="text" class="title_font_size" id="title_font_size" maxlength="3">
 		</div>
 		<div style="padding: 10px; float: left" id="radio-holder">
 			<p>AlIGN</p>
@@ -185,6 +186,10 @@
 			<div class="margin-hover"><p>Right: </p><input type="text" class="hover_margin" id="rightmargin_hover"  maxlength="3"><span class="px-holder">px</span></div>
 			<div class="margin-hover"><p>Bottom: </p><input type="text" class="hover_margin" id="bottommargin_hover"  maxlength="3"><span class="px-holder">px</span></div>
 			<div class="margin-hover"><p>Left: </p><input type="text" class="hover_margin" id="leftmargin_hover"  maxlength="3"><span class="px-holder">px</span></div>
+		</div>
+		<div style="padding: 10px;float:left">
+			<div class="hover-font-options"> Spacing:  <input type="text" id="hover_spacing" maxlength="3"><span class="px-holder">px</span> </div>	
+			<div class="hover-font-options"> Font Size: <input type="text" id="hover_font_size" maxlength="3"><span class="px-holder">px</span> </div>	
 		</div>
 		<div class="image_upload" style="margin-top: 14px;padding:10px;display:inline-block">
 				<label for="upload_image_hover" style="margin-top: 20px;">

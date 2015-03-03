@@ -44,6 +44,9 @@ jQuery(document).ready(function (e) {
   change_background_on_hover_box();
   remove_img_bg_hover();
   change_hover_title_link();
+  change_hover_title_font_size();
+  change_hover_font_size();
+  change_hover_text_line_height();
   //remain_top();
   //Variables
   var Alert = new CustomAlert();
@@ -147,8 +150,8 @@ jQuery(document).ready(function (e) {
       {
         e(".square_preview").css("height", e("#height_main").val() + "px" );
         e(".hoverMain").css("height", e("#height_main").val() + "px" );
-        var total_height = e(".square_preview").height();
-        var title_height = 95;
+        var total_height = e(".square_preview").height() - 50;
+        var title_height = e("#thehover_title").outerHeight(true);
         var total = total_height - title_height;
         if (e("option:selected", "#HovEffect").attr("in") == "slide") {
            $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
@@ -159,9 +162,13 @@ jQuery(document).ready(function (e) {
       {
         e(".square_preview").css("height", "300px" );
         e(".hoverMain").css("height", "300px" );
+        e(".hoverMain").css("height", e("#height_main").val() + "px" );
+        var total_height = e(".square_preview").height() - 50;
+        var title_height = e("#thehover_title").outerHeight(true);
+        var total = total_height - title_height;
         if (e("option:selected", "#HovEffect").attr("in") == "slide") {
            $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
-         $HOVER.animate({top: "205"}, {queue: false, duration: 400})
+         $HOVER.animate({top: total}, {queue: false, duration: 400})
         }
       }
     });
@@ -295,8 +302,8 @@ jQuery(document).ready(function (e) {
       }
       },function()
       {
-        var total_height = e(".square_preview").height();
-        var title_height = 95;
+        var total_height = e(".square_preview").height() - 50;
+        var title_height = e("#thehover_title").outerHeight(true);
         var total = total_height - title_height;
         if (e("option:selected", "#HovEffect").attr("in") == "slide") {
            $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
@@ -351,7 +358,7 @@ jQuery(document).ready(function (e) {
           if (e("option:selected", "#HovEffect").attr("in") == "slide")
           {
             var total_height = e(".square_preview").height();
-            var title_height = 100;
+            var title_height = e("#thehover_title").outerHeight(true);
             var total = total_height - title_height;
             $HOVER.animate({top: total}, {queue: false, duration: 400})
           }
@@ -394,25 +401,49 @@ jQuery(document).ready(function (e) {
   //Change margin
   function change_margin_for_hover_top(){
     e("#topmargin_hover").change(function(){
+      if (e("#topmargin_hover").val() != ""){
       e("#thehover_content").css("margin-top",e("#topmargin_hover").val() + "px");
+      }
+      else
+      {
+        e("#thehover_content").css("margin-top","1em");
+      }
     })
   }
 
   function change_margin_for_hover_right(){
     e("#rightmargin_hover").change(function(){
+      if (e("#rightmargin_hover").val() != ""){
       e("#thehover_content").css("margin-right",e("#rightmargin_hover").val() + "px")
+      }
+      else
+      {
+        e("#thehover_content").css("margin-right","0px")
+      }
     })
   }
 
   function change_margin_for_hover_bottom(){
     e("#bottommargin_hover").change(function(){
+      if (e("#bottommargin_hover").val() != ""){
       e("#thehover_content").css("margin-bottom",e("#bottommargin_hover").val() + "px")
+      }
+      else
+      {
+        e("#thehover_content").css("margin-bottom","1em")
+      }
     })
   }
 
   function change_margin_for_hover_left(){
     e("#leftmargin_hover").change(function(){
+      if (e("#leftmargin_hover").val() != ""){
       e("#thehover_content").css("margin-left",e("#leftmargin_hover").val() + "px")
+      }
+      else
+      {
+        e("#thehover_content").css("margin-left","0px")
+      }
     })
   }
 
@@ -464,6 +495,7 @@ jQuery(document).ready(function (e) {
           hover:
           {hov_title: e("#hover_title").val(),
           hov_title_link: e("#hover_title_link").val(),
+          hov_title_font_size: e("#title_font_size").val(),
           hov_align: e('input[name=align]:checked').val(),
           hov_effect: e("#HovEffect option:selected").val(),
           hov_opac: e("#opacity_hover").val(),
@@ -475,6 +507,8 @@ jQuery(document).ready(function (e) {
           hov_mar_r: e("#rightmargin_hover").val(),
           hov_mar_b: e("#bottommargin_hover").val(),
           hov_mar_l: e("#leftmargin_hover").val(),
+          hov_text_spacing: e("#hover_spacing").val(),
+          hov_text_font_size: e("#hover_font_size").val,
           hov_text: e("#hover_content").val(),
           hov_title_color: e("#title_color").val()
           }}};
@@ -533,6 +567,7 @@ jQuery(document).ready(function (e) {
           hover:
           {hov_title: e("#hover_title").val(),
           hov_title_link: e("#hover_title_link").val(),
+          hov_title_font_size: e("#title_font_size").val(),
           hov_align: e('input[name=align]:checked').val(),
           hov_effect: e("#HovEffect option:selected").val(),
           hov_opac: e("#opacity_hover").val(),
@@ -544,6 +579,8 @@ jQuery(document).ready(function (e) {
           hov_mar_r: e("#rightmargin_hover").val(),
           hov_mar_b: e("#bottommargin_hover").val(),
           hov_mar_l: e("#leftmargin_hover").val(),
+          hov_text_spacing: e("#hover_spacing").val(),
+          hov_text_font_size: e("#hover_font_size").val(),
           hov_text: e("#hover_content").val(),
           hov_title_color: e("#title_color").val()
           }}};
@@ -677,6 +714,7 @@ jQuery(document).ready(function (e) {
 
                 var hov_title = t[0].hov_title;
                 var hov_title_link = t[0].hov_title_link;
+                var hov_title_font_size = t[0].hov_title_font_size;
 
                 if (t[0].hov_align == "")
                 {
@@ -698,6 +736,8 @@ jQuery(document).ready(function (e) {
                 var hov_mar_r = t[0].hov_mar_r;
                 var hov_mar_b = t[0].hov_mar_b;
                 var hov_mar_l = t[0].hov_mar_l;
+                var hov_text_spacing = t[0].hov_text_spacing;
+                var hov_text_font_size = t[0].hov_text_font_size;
                 var hov_text = t[0].hov_text;
                 var hov_title_color = t[0].hov_title_color;
               //
@@ -738,6 +778,7 @@ jQuery(document).ready(function (e) {
                 e("#hover_title").val(hov_title);
                 e("#title_color").val(hov_title_color);
                 e("#hover_title_link").val(hov_title_link);
+                e("#title_font_size").val(hov_title_font_size);
                 e("input[name=align][value="+ hov_align +"]").prop('checked',true);
                 if (hov_effect != 1)
                   {
@@ -763,6 +804,8 @@ jQuery(document).ready(function (e) {
                 e("#rightmargin_hover").val(hov_mar_r);
                 e("#bottommargin_hover").val(hov_mar_b);
                 e("#leftmargin_hover").val(hov_mar_l);
+                e("#hover_spacing").val(hov_text_spacing);
+                e("#hover_font_size").val(hov_text_font_size);
                 e("#hover_content").val(hov_text);
               //
 
@@ -849,5 +892,55 @@ function remain_top(){
   }
 
 
-  
+  function change_hover_title_font_size()
+  {
+    e("#title_font_size").change(function(){
+      if (e("#title_font_size").val() != ""){
+      e("#thehover_title").css("font-size",e("#title_font_size").val()+ "px");
+       var total_height = e(".square_preview").height() - 50;
+        var title_height = e("#thehover_title").outerHeight(true);
+        var total = total_height - title_height;
+        if (e("option:selected", "#HovEffect").attr("in") == "slide") {
+           $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
+         $HOVER.animate({top: total}, {queue: false, duration: 400})
+        }
+    }
+    else
+    {
+      e("#thehover_title").css("font-size","2em");
+      if (e("option:selected", "#HovEffect").attr("in") == "slide") {
+           $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
+         $HOVER.animate({top: "205"}, {queue: false, duration: 400})
+        }
+    }
+    })
+  }
+
+  function change_hover_font_size()
+  {
+    e("#hover_font_size").change(function(){
+      if (e("#hover_font_size").val() != ""){
+      e("#thehover_content").css("font-size",e("#hover_font_size").val()+"px");
+      }
+      else
+      {
+        e("#thehover_content").css("font-size","13px");
+      }
+    })
+
+  }
+
+  function change_hover_text_line_height()
+  {
+    e("#hover_spacing").change(function(){
+      if (e("#hover_spacing").val() != "")
+      {
+        e("#thehover_content").css("line-height",e("#hover_spacing").val()+"px")
+      }
+      else
+      {
+        e("#thehover_content").css("line-height","1.5")
+      }
+    })
+  }
 });

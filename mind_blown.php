@@ -4,7 +4,7 @@ Plugin Name: Atomic Penguins Mind-Blowing Hover Effects
 Description: Customize your own hover element and add them to your page.
 Author: Atomic Penguin
 Author URL: http://atomicpenguins.com/
-Version: 1.0
+Version: 1.1
 Version
 */
 function the_admin() {
@@ -12,7 +12,7 @@ function the_admin() {
 }
 
 function mind_blown() {
-    add_menu_page("Atomic Penguins Mind-Blowing Hover Effects", "Atomic Penguins Mind-Blowing Hover Effects", 1, "Atomic Penguins Mind-Blowing Hover Effects", "the_admin",plugins_url('atomic penguin.png',__FILE__));
+    add_menu_page("Atomic Penguins Mind-Blowing Hover Effects", "Hover Effect", 1, "Atomic Penguins Mind-Blowing Hover Effects", "the_admin",plugins_url('atomic penguin.png',__FILE__));
 }
 
 add_action('admin_menu', 'mind_blown');
@@ -194,6 +194,27 @@ add_action('wp_ajax_SAVE', 'save_new_project');
                     if ( strlen( $safe_hov_mar_l ) > 3 )
                     $safe_hov_mar_l = substr( $safe_hov_mar_l, 0, 3 );
                 }
+        $safe_hov_title_font_size = intval( $_POST['data']['hover']['hov_title_font_size']);
+                if ( ! $safe_hov_title_font_size )
+                {
+                    $safe_hov_title_font_size = '';
+                    if ( strlen( $safe_hov_title_font_size ) > 3 )
+                    $safe_hov_title_font_size = substr( $safe_hov_title_font_size, 0, 3 );
+                }
+        $safe_hov_text_spacing = intval( $_POST['data']['hover']['hov_text_spacing']);
+                if ( ! $safe_hov_text_spacing )
+                {
+                    $safe_hov_text_spacing = '';
+                    if ( strlen( $safe_hov_text_spacing ) > 3 )
+                    $safe_hov_text_spacing = substr( $safe_hov_text_spacing, 0, 3 );
+                }
+        $safe_hov_text_font_size = intval( $_POST['data']['hover']['hov_text_font_size']);
+                if ( ! $safe_hov_text_font_size )
+                {
+                    $safe_hov_text_font_size = '';
+                    if ( strlen( $safe_hov_text_font_size ) > 3 )
+                    $safe_hov_text_font_size = substr( $safe_hov_text_font_size, 0, 3 );
+                }
         function sanitize_drop_down($input) {
             $valid = array(
                 'Slide' => 'Slide',
@@ -294,6 +315,7 @@ add_action('wp_ajax_SAVE', 'save_new_project');
             //hover
             'hov_title' => sanitize_text_field($_POST['data']['hover']['hov_title']),
             'hov_title_link' => esc_html($_POST['data']['hover']['hov_title_link']),
+            'hov_title_font_size' => $safe_hov_title_font_size,
             'hov_align' => sanitize_align_select($_POST['data']['hover']['hov_align']),
             'hov_effect' => sanitize_drop_down($_POST['data']['hover']['hov_effect']),
             'hov_opac' => $safe_hov_opac,
@@ -304,6 +326,8 @@ add_action('wp_ajax_SAVE', 'save_new_project');
             'hov_mar_r' => $safe_hov_mar_r,
             'hov_mar_b' => $safe_hov_mar_b,
             'hov_mar_l' => $safe_hov_mar_l,
+            'hov_text_spacing' => $safe_hov_text_spacing,
+            'hov_text_font_size' => $safe_hov_text_font_size,
             'hov_font_clr' => sanitize_hex_color($_POST['data']['hover']['hov_font_clr']),
             'hov_text' => sanitize_text_field($_POST['data']['hover']['hov_text']),
             'hov_title_color' => sanitize_hex_color($_POST['data']['hover']['hov_title_color']),
@@ -543,6 +567,27 @@ function overwrite_mind(){
                     if ( strlen( $safe_hov_mar_l ) > 3 )
                     $safe_hov_mar_l = substr( $safe_hov_mar_l, 0, 3 );
                 }
+        $safe_hov_title_font_size = intval( $_POST['data']['hover']['hov_title_font_size']);
+                if ( ! $safe_hov_title_font_size )
+                {
+                    $safe_hov_title_font_size = '';
+                    if ( strlen( $safe_hov_title_font_size ) > 3 )
+                    $safe_hov_title_font_size = substr( $safe_hov_title_font_size, 0, 3 );
+                }
+        $safe_hov_text_spacing = intval( $_POST['data']['hover']['hov_text_spacing']);
+                if ( ! $safe_hov_text_spacing )
+                {
+                    $safe_hov_text_spacing = '';
+                    if ( strlen( $safe_hov_text_spacing ) > 3 )
+                    $safe_hov_text_spacing = substr( $safe_hov_text_spacing, 0, 3 );
+                }
+        $safe_hov_text_font_size = intval( $_POST['data']['hover']['hov_text_font_size']);
+                if ( ! $safe_hov_text_font_size )
+                {
+                    $safe_hov_text_font_size = '';
+                    if ( strlen( $safe_hov_text_font_size ) > 3 )
+                    $safe_hov_text_font_size = substr( $safe_hov_text_font_size, 0, 3 );
+                }
         function sanitize_drop_down($input) {
             $valid = array(
                 'Slide' => 'Slide',
@@ -639,6 +684,7 @@ function overwrite_mind(){
             //hover
             'hov_title' => sanitize_text_field($_POST['data']['hover']['hov_title']),
             'hov_title_link' => esc_url($_POST['data']['hover']['hov_title_link']),
+            'hov_title_font_size' => $safe_hov_title_font_size,
             'hov_align' => sanitize_align_select($_POST['data']['hover']['hov_align']),
             'hov_effect' => sanitize_drop_down($_POST['data']['hover']['hov_effect']),
             'hov_opac' => $safe_hov_opac,
@@ -649,6 +695,8 @@ function overwrite_mind(){
             'hov_mar_r' => $safe_hov_mar_r,
             'hov_mar_b' => $safe_hov_mar_b,
             'hov_mar_l' => $safe_hov_mar_l,
+            'hov_text_spacing' => $safe_hov_text_spacing,
+            'hov_text_font_size' => $safe_hov_text_font_size, 
             'hov_font_clr' => sanitize_hex_color($_POST['data']['hover']['hov_font_clr']),
             'hov_text' => sanitize_text_field($_POST['data']['hover']['hov_text']),
             'hov_title_color' => sanitize_hex_color($_POST['data']['hover']['hov_title_color']),
@@ -712,6 +760,7 @@ function install_mind()
             hov_title  varchar(100),
             hov_title_link varchar(50),
             hov_title_color varchar(50),
+            hov_title_font_size int(5),
             hov_align text,
             hov_effect text,
             hov_opac decimal(5,2),
@@ -723,6 +772,8 @@ function install_mind()
             hov_mar_r int(5),
             hov_mar_b int(5),
             hov_mar_l int(5),
+            hov_text_spacing int(5),
+            hov_text_font_size int(5),
             hov_text text,
             short_code varchar(200),
             date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

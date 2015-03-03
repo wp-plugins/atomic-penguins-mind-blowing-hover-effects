@@ -5,7 +5,7 @@ Plugin Name: Mind Blown
 Tags: Hover, Effects, animate.css
 Author URL: atomicpenguins.com/wordpress
 Author: Atomic Penguins
-Version: 1.0
+Version: 1.1
 License: GPLv2 or later
 Donate link: none
 Tested up to: 4.0.1
@@ -23,8 +23,10 @@ The Mind.Blown plugin is a hover effect plugin. You can customize the effect of 
 
 
 == Changelog ==
-= Version 1.0 =
-* No changes yet
+= Version 1.1 =
+* Font size on hover title
+* Font size on hover content
+* Font spacing on hover content
 
 
 == Frequently Asked Questions ==
@@ -38,8 +40,8 @@ Yes it is.
 It is responsive as well.
 
 == Upgrade Notice ==
-= Version 1.0 =
-* First version
+= Version 1.1 =
+* Upgrade of Version 1
 
 
 == Screenshots ==

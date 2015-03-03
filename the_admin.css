@@ -1,3 +1,7 @@
+.hover-font-options
+{
+	float: left;
+}
 .the_box
 {
 	height: 400px;
@@ -81,12 +85,12 @@ input[type="text"]
 	width: auto;
 	height: 17px;
 	min-width: 16px;
-	padding: 2px 5px 6px;
+	padding: 4px 5px 4px;
 	font-size: 14px;
 	text-shadow: 0 1px 0 #FFFFFF;
 	background-color: #eeeeee;
 	border: 1px solid #ccc;
-	margin-left: -1px;
+	margin-left: -2px;
 	color: black;
 	margin-right: 2px;
 }
