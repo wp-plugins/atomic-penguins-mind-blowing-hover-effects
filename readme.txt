@@ -16,6 +16,23 @@ Stable Tag: 1.1
 
 The Mind.Blown plugin is a hover effect plugin. You can customize the effect of the hover entrance, the text inside the div, the title of the hover div and the link for the hover div. This is a great plugin if you want to create several links with special hover effects.
 
+Free Version
+
+Features 
+<li>6 entrance animation</li>
+<li>Main Box Customization</li>
+<li>Hover Box Customization</li>
+
+Contact developer at john@atomicpenguins.com for the premium version.
+
+
+Premium Version
+
+Features
+<li>31 Entrance Features</li>
+<li>Main Box Customization</li>
+<li>Hover Box Customization</li>
+
 ==Installation==
 
 1. Upload plugin.zip to wp/content/plugins directory
