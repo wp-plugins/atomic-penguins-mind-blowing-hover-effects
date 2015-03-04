@@ -20,7 +20,7 @@ The Mind.Blown plugin is a hover effect plugin. You can customize the effect of 
 
 1. Upload plugin.zip to wp/content/plugins directory
 2. Activate the plugins through the 'Plugins' menu in Wordpress Admin
-3. A new menu titled 'Plugin Name' will be added to the side menu. Click it and start working with your first hover effect.
+3. A new menu titled 'Hover Effect' will be added to the side menu. Click it and start working with your first hover effect.
 
 
 
