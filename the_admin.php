@@ -127,46 +127,21 @@
 			<select class="hEffect" id="HovEffect">
 				<optgroup label="Other">
 					<option in="slide" value="1">Slide</option>
-					<option in="lightSpeedIn" out="lightSpeedOut">Light Speed</option>
-					<option in="rollIn" out="rollOut">Roll</option>
-					<option in="wobble" out="fadeOut">Wobble</option>
-					<option in="tada" out="fadeOut">Tadaa!</option>
-					<option in="swing" out="fadeOut">Swing</option>
-					<option in="shake" out="fadeOut">Shake</option>
-					<option in="rubberBand" out="fadeOut">Rubberband</option>
-					<option in="pulse" out="fadeOut">Pulse</option>
-					<option in="flash" out="fadeOut">Flash</option>
 				</optgroup>
 				<optgroup label="Fade">
 					<option in="fadeIn" out="fadeOut">FadeIn</option>
-					<option in="fadeInUp" out="fadeOutUp">FadeUp</option>
-					<option in="fadeInDown" out="fadeOutDown">FadeDown</option>
-					<option in="fadeInRight" out="fadeOutRight">FadeRight</option>
-					<option in="fadeInLeft" out="fadeOutLeft">FadeLeft</option>
 				</optgroup>
 				<optgroup label="Bounce">
 					<option in="bounceIn" out="bounceOut">Bounce In</option>
-					<option in="bounceInDown" out="bounceOutDown">Bounce In Down</option>
-					<option in="bounceInLeft" out="bounceOutLeft">Bounce In Left</option>
-					<option in="bounceInUp" out="bounceOutUp">Bounce In Up</option>
 				</optgroup>
 				<optgroup label="Flippers">
 					<option in="flipInX" out="flipOutX">Flip X</option>
-					<option in="flipInY" out="flipOutY">Flip Y</option>
 				</optgroup>
 				<optgroup label="Rotate">
 					<option in="rotateIn" out="rotateOut">Rotate In</option>
-					<option in="rotateInDownLeft" out="rotateOutDownLeft">Rotate In Down Left</option>
-					<option in="rotateInDownRight" out="rotateOutDownRight">Rotate In Down Right</option>
-					<option in="rotateInUpLeft" out="rotateOutUpLeft">Rotate In Up Left</option>
-					<option in="rotateInUpRight" out="rotateOutUpRight">Rotate In Up Right</option>
 				</optgroup>
 				<optgroup label="Zoom">
 					<option in="zoomIn" out="zoomOut">Zoom In</option>
-					<option in="zoomInDown" out="zoomOutDown">Zoom In Down</option>
-					<option in="zoomInUp" out="zoomOutUp">Zoom In Up</option>
-					<option in="zoomInRight" out="zoomOutRight">Zoom In Right</option>
-					<option in="zoomInLeft" out="zoomOutLeft">Zoom In Left</option>
 				</optgroup>
 			</select>
 		</div>
