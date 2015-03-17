@@ -10,7 +10,7 @@ License: GPLv2 or later
 Donate link: none
 Tested up to: 4.0.1
 Requires at least: 4.0.1
-Stable Tag: 1.1
+Stable Tag: 1.1.1
 
 ==Description==
 
@@ -47,6 +47,8 @@ Features
 * Font size on hover content
 * Font spacing on hover content
 
+= Version 1.1.1 = 
+* Bug Fix
 
 == Frequently Asked Questions ==
 
@@ -61,6 +63,9 @@ It is responsive as well.
 == Upgrade Notice ==
 = Version 1.1 =
 * Upgrade of Version 1
+
+= Version 1.1 = 
+*Bug Fix
 
 
 == Screenshots ==

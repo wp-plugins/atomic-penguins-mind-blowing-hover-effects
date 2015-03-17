@@ -357,10 +357,19 @@ jQuery(document).ready(function (e) {
         e("#HovEffect").change(function(){
           if (e("option:selected", "#HovEffect").attr("in") == "slide")
           {
-            var total_height = e(".square_preview").height();
-            var title_height = e("#thehover_title").outerHeight(true);
-            var total = total_height - title_height;
+             var total_height = e(".square_preview").height() - 50;
+        if (e("#hover_title").val() == "")
+        {
+           title_height = e("#thehover_title").outerHeight(true) / 2;
+        }
+        else
+        {
+         title_height = e("#thehover_title").outerHeight(true);
+        }
+        var total = total_height - title_height;
             $HOVER.animate({top: total}, {queue: false, duration: 400})
+          $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut grayscale non-grayscale wobble tada swing shake rubberBand pulse flash circleOut grayscale non-grayscale pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut grayscale non-grayscale");
+            $HOVER.attr("in","slide");
           }
           $HOVER.attr("entrance", "effect");
           $HOVER.removeClass("animated flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight lightSpeedIn lightSpeedOut rollIn rollOut tada swing flash circleOut wobble tada swing shake rubberBand pulse flash circleOut pulse flipSide swrillIn hiLeft hiRight flipFlap outIn zoomIn zoomOut zoomInDown zoomInUp zoomInRight zoomInLeft zoomOutDown zoomOutUp zoomOutLeft zoomOutRight wobble tada swing shake rubberBand pulse flash circleOut");
