@@ -758,7 +758,7 @@ function install_mind()
             main_mar_l int(5),
             main_text text,
             hov_title  varchar(100),
-            hov_title_link varchar(50),
+            hov_title_link varchar(255),
             hov_title_color varchar(50),
             hov_title_font_size int(5),
             hov_align text,
