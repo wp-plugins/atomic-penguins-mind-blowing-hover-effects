@@ -5,12 +5,12 @@ Plugin Name: Mind Blown
 Tags: Hover, Effects, animate.css
 Author URL: atomicpenguins.com/wordpress
 Author: Atomic Penguins
-Version: 1.1.2
+Version: 1.1.3
 License: GPLv2 or later
 Donate link: none
 Tested up to: 4.2
 Requires at least: 4.1.1
-Stable Tag: 1.1.2
+Stable Tag: 1.1.3
 
 ==Description==
 
