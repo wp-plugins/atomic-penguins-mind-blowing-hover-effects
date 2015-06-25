@@ -4,7 +4,7 @@ Plugin Name: Atomic Penguins Mind-Blowing Hover Effects
 Description: Customize your own hover element and add them to your page.
 Author: Atomic Penguin
 Author URL: http://atomicpenguins.com/
-Version: 1.1.2
+Version: 1.1.3
 Version
 */
 function the_admin() {
