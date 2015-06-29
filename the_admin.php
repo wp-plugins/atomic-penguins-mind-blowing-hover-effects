@@ -1,7 +1,7 @@
 <?php ?>
 
 <p style=" font-size: 20px; color: red;" class="donation-text">If you love our plugin, please help us make it better for you.</p>
-<div style="margin-top: -65px" class="donation-container">
+<div style="margin-top: -65px;float: right;  width: 65%;" class="donation-container">
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_donations">
 	<input type="hidden" name="business" value="andrew@atomicpenguins.com">
